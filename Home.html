@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://unpkg.com/scrollreveal@4"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">
+                <h1>NidaPervez</h1>
+            </a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="project.html">Our Portfolio</a></li>
+                    <li><a href="Skill.html">Our Skills</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="auth">
+                <a href="#">Login</a>
+                <button class="register-btn">Register</button>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars fa-2x"></i>
+                </div>
+            </div>
+        </header>
+        <main class="main-content">
+            <div class="image-container">
+                <img src="nidapic.jpg" alt="Office Space" class="office-image">
+            </div>
+            <div class="text-container">
+                <h1 class="main-title">Hi My Name is Nida</h1>
+                <p>Welcome to my Profile. I am here to give You services</p>
+                <form class="search-form">
+                    <input type="text" placeholder="Enter Your Name" class="city-input">
+                    <button class="find-office-btn">Submit</button>
+                </form>
+                <div class="companies-used">
+                    <p>Also Available here:</p>
+                    <ul>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-airbnb"></i></li>
+                        <li><i class="fa-brands fa-apple"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const scroll = ScrollReveal({
+            reset: true,
+            duration: 2600,
+            distance: '60px'
+        });
+        scroll.reveal('.image-container', { delay: 200, origin: 'top' });
+        scroll.reveal('.text-container', { delay: 500, origin: 'left' });
+    </script>
+</body>
+</html>

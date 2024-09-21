@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #f0f4f8, #e6e9f0);
+            color: #444;
+            margin: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .header .logo {
+            font-size: 24px;
+        }
+        .nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        .nav ul li {
+            margin: 0 15px;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            color: #444;
+        }
+        .projects {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .projects h1 {
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.3);
+            margin: 15px;
+            padding: 20px;
+            width: calc(30% - 40px); /* Three cards in a row */
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .project-card h2 {
+            margin: 15px 0 10px;
+            font-size: 22px;
+        }
+        .project-card p {
+            margin-bottom: 15px;
+            color: #999;
+        }
+        .project-card a {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #FB374D;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .project-card a:hover {
+            background: #e02a39;
+        }
+        @media (max-width: 990px) {
+            .project-card {
+                width: calc(45% - 40px); /* Two cards in a row */
+            }
+        }
+        @media (max-width: 600px) {
+            .project-card {
+                width: calc(100% - 40px); /* One card in a row */
+            }
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">NidaPervez</a>
+        <nav class="nav">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="project.html">Our Portfolio</a></li>
+                <li><a href="Skill.html">Our Skills</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <a href="#">Login</a>
+            <button class="register-btn">Register</button>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="projects">
+        <h1>My Projects</h1>
+
+        <div class="project-container">
+            <div class="project-card">
+                <img src="next.jpg" alt="Grocery Project">
+                <h2>Next js Project</h2>
+                <p>This is my portfolio in next.js.</p>
+                <a href="https://second-mile-stone-96sf.vercel.app/project" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="ama.jpg" alt="Grocery Project">
+                <h2>Amazon Clone Project</h2>
+                <p>This website is the clone of amazon.</p>
+                <a href="https://amazon-clone-mfaky44e3-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="gro.jpg" alt="Grocery Project">
+                <h2>Grocery Project</h2>
+                <p>This website is designed to streamline the shopping experience for groceries.</p>
+                <a href="https://grocery-website-o9959o86c-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="ani.jpg" alt="Grocery Project">
+                <h2>Animated Project</h2>
+                <p>This website is designed to show animation.</p>
+                <a href="https://animated-z7gfz3jpa-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="fa.jpg" alt="Grocery Project">
+                <h2>Facebook Clone Project</h2>
+                <p>This website is designed to show a Facebook clone.</p>
+                <a href="https://facebookloginclone-e5u8o20tb-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="ca.jpg" alt="Grocery Project">
+                <h2>Calculator Project</h2>
+                <p>This website is designed to streamline calculations.</p>
+                <a href="https://calculator-4hg8rzgo2-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="nav.jpg" alt="Grocery Project">
+                <h2>Simplest Navbar Project</h2>
+                <p>This website demonstrates a simple navbar.</p>
+                <a href="https://nav-glonf74bu-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="acc.jpg" alt="Grocery Project">
+                <h2>Accessories Project</h2>
+                <p>This website is designed to shop for accessories.</p>
+                <a href="https://accessories-website-nlek30y81-nida-pervezs-projects.vercel.app/index.html" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="timer.jpg" alt="Timer Project">
+                <h2>Timer Project</h2>
+                <p>This project is a timer with different functionalities.</p>
+                <a href="https://counter1st-project.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+
+
+            <div class="project-card">
+                <img src="cv.jpg" alt="Timer Project">
+                <h2>Cv Project</h2>
+                <p>This project is representing my Cv.</p>
+                <a href="https://hackathon-milestone1-2-hazel.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+
+            <div class="project-card">
+                <img src="resumebuilder.jpg" alt="Timer Project">
+                <h2>Resume Building Project</h2>
+                <p>This project is related to resume building.</p>
+                <a href="https://hackathon-milestone3-4-5.vercel.app/" target="_blank">View Project</a>
+            </div>
+
+
+
+
+
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2023 NidaPervez. All rights reserved.</p>
+    </footer>
+</body>
+</html>
