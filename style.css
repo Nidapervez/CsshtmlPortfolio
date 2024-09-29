@@ -26,10 +26,15 @@ body {
     margin: 0;
 }
 
+.nav {
+    display: flex; /* Show on larger screens */
+}
+
 .nav ul {
-    display: flex;
+    display: flex; /* Show links horizontally */
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav ul li {
@@ -64,6 +69,11 @@ body {
 
 .register-btn:hover {
     background: #e02a39;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none; /* Hide on larger screens */
 }
 
 .main-content {
@@ -102,6 +112,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: calc(100% - 120px);
 }
 
 .find-office-btn {
@@ -163,6 +174,36 @@ body {
 
 /* Responsive styles */
 @media (max-width: 600px) {
+    .nav {
+        display: none; /* Hide nav on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        top: 60px; /* Below the header */
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 1000; /* On top of other elements */
+    }
+
+    .nav.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Vertical layout */
+        width: 100%; /* Full width */
+        padding: 0;
+    }
+
+    .nav ul li {
+        margin: 10px 0; /* Space between items */
+        text-align: center; /* Center align text */
+    }
+
+    .menu-icon {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
     .main-content {
         flex-direction: column;
         align-items: center;
@@ -170,5 +211,21 @@ body {
 
     .image-container, .text-container {
         max-width: 100%;
+        padding: 0;
+    }
+
+    .city-input {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+    }
+
+    .search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .find-office-btn {
+        width: 100%;
     }
 }

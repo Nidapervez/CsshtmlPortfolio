@@ -34,6 +34,10 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .nav {
+            display: flex;
+        }
+
         .nav ul {
             display: flex;
             list-style: none;
@@ -118,6 +122,30 @@
             background-color: #FB374D; /* Match the main color */
             color: white;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .nav {
+                display: none; /* Hide nav by default */
+                flex-direction: column; /* Stack vertically */
+                position: absolute;
+                top: 60px; /* Below the header */
+                left: 0;
+                right: 0;
+                background: #fff;
+                z-index: 1000;
+            }
+            .nav.active {
+                display: flex; /* Show when active */
+            }
+            .menu-icon {
+                display: block; /* Show hamburger icon */
+                cursor: pointer;
+            }
+            .menu-icon i {
+                font-size: 24px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -126,6 +154,9 @@
             <a href="#" class="logo">
                 <h1>NidaPervez</h1>
             </a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </div>
             <nav class="nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
@@ -138,9 +169,6 @@
             <div class="auth">
                 <a href="#">Login</a>
                 <button class="register-btn">Register</button>
-                <div class="menu-icon">
-                    <i class="fa-solid fa-bars fa-2x"></i>
-                </div>
             </div>
         </header>
 
@@ -156,11 +184,11 @@
                     <span class="bar"><span class="css"></span></span>
                 </li>
                 <li>
-                    <h3>Typescript</h3><p>70%</p>
+                    <h3>PHP</h3><p>70%</p>
                     <span class="bar"><span class="php"></span></span>
                 </li>
                 <li>
-                    <h3>Next.js</h3><p>80%</p>
+                    <h3>JavaScript</h3><p>80%</p>
                     <span class="bar"><span class="javascript"></span></span>
                 </li>
             </ul>
@@ -170,5 +198,12 @@
     <footer>
         <p>&copy; 2024 NidaPervez. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

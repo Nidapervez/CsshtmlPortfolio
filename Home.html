@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nidz</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512- Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"> 
     <script src="https://unpkg.com/scrollreveal@4"></script>
 </head>
 <body>
     <div class="container">
         <header class="header">
+            <div class="menu-icon" id="menu-icon">
+                <i class="fa-solid fa-bars fa-2x"></i>
+            </div>
             <a href="#" class="logo">
                 <h1>NidaPervez</h1>
             </a>
-            <nav class="nav">
+            <nav class="nav" id="nav">
                 <ul>
                     <li><a href="Home.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -26,9 +29,6 @@
             <div class="auth">
                 <a href="#">Login</a>
                 <button class="register-btn">Register</button>
-                <div class="menu-icon">
-                    <i class="fa-solid fa-bars fa-2x"></i>
-                </div>
             </div>
         </header>
         <main class="main-content">
@@ -61,6 +61,12 @@
         });
         scroll.reveal('.image-container', { delay: 200, origin: 'top' });
         scroll.reveal('.text-container', { delay: 500, origin: 'left' });
+
+        // Toggle navigation
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        });
     </script>
 </body>
 </html>

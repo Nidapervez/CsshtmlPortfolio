@@ -24,6 +24,9 @@
         .header .logo {
             font-size: 24px;
         }
+        .nav {
+            display: flex;
+        }
         .nav ul {
             display: flex;
             list-style: none;
@@ -93,6 +96,31 @@
                 width: calc(100% - 40px); /* One card in a row */
             }
         }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav {
+                display: none; /* Hide nav by default */
+                flex-direction: column; /* Stack vertically */
+                position: absolute;
+                top: 60px; /* Below the header */
+                left: 0;
+                right: 0;
+                background: #fff;
+                z-index: 1000;
+            }
+            .nav.active {
+                display: flex; /* Show when active */
+            }
+            .menu-icon {
+                display: block; /* Show hamburger icon */
+                cursor: pointer;
+            }
+            .menu-icon i {
+                font-size: 24px;
+            }
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
@@ -105,6 +133,9 @@
 <body>
     <header class="header">
         <a href="#" class="logo">NidaPervez</a>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars fa-2x"></i>
+        </div>
         <nav class="nav">
             <ul>
                 <li><a href="Home.html">Home</a></li>
@@ -117,25 +148,21 @@
         <div class="auth">
             <a href="#">Login</a>
             <button class="register-btn">Register</button>
-            <div class="menu-icon">
-                <i class="fa-solid fa-bars fa-2x"></i>
-            </div>
         </div>
     </header>
 
     <section class="projects">
         <h1>My Projects</h1>
-
         <div class="project-container">
             <div class="project-card">
-                <img src="next.jpg" alt="Grocery Project">
+                <img src="next.jpg" alt="Next js Project">
                 <h2>Next js Project</h2>
                 <p>This is my portfolio in next.js.</p>
                 <a href="https://second-mile-stone-96sf.vercel.app/project" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <img src="ama.jpg" alt="Grocery Project">
+                <img src="ama.jpg" alt="Amazon Clone Project">
                 <h2>Amazon Clone Project</h2>
                 <p>This website is the clone of amazon.</p>
                 <a href="https://amazon-clone-mfaky44e3-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
@@ -149,35 +176,35 @@
             </div>
 
             <div class="project-card">
-                <img src="ani.jpg" alt="Grocery Project">
+                <img src="ani.jpg" alt="Animated Project">
                 <h2>Animated Project</h2>
                 <p>This website is designed to show animation.</p>
                 <a href="https://animated-z7gfz3jpa-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <img src="fa.jpg" alt="Grocery Project">
+                <img src="fa.jpg" alt="Facebook Clone Project">
                 <h2>Facebook Clone Project</h2>
                 <p>This website is designed to show a Facebook clone.</p>
                 <a href="https://facebookloginclone-e5u8o20tb-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <img src="ca.jpg" alt="Grocery Project">
+                <img src="ca.jpg" alt="Calculator Project">
                 <h2>Calculator Project</h2>
                 <p>This website is designed to streamline calculations.</p>
                 <a href="https://calculator-4hg8rzgo2-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <img src="nav.jpg" alt="Grocery Project">
+                <img src="nav.jpg" alt="Simplest Navbar Project">
                 <h2>Simplest Navbar Project</h2>
                 <p>This website demonstrates a simple navbar.</p>
                 <a href="https://nav-glonf74bu-nida-pervezs-projects.vercel.app/" target="_blank">View Project</a>
             </div>
 
             <div class="project-card">
-                <img src="acc.jpg" alt="Grocery Project">
+                <img src="acc.jpg" alt="Accessories Project">
                 <h2>Accessories Project</h2>
                 <p>This website is designed to shop for accessories.</p>
                 <a href="https://accessories-website-nlek30y81-nida-pervezs-projects.vercel.app/index.html" target="_blank">View Project</a>
@@ -190,33 +217,24 @@
                 <a href="https://counter1st-project.vercel.app/" target="_blank">View Project</a>
             </div>
 
-
-
             <div class="project-card">
-                <img src="cv.jpg" alt="Timer Project">
-                <h2>Cv Project</h2>
-                <p>This project is representing my Cv.</p>
-                <a href="https://hackathon-milestone1-2-hazel.vercel.app/" target="_blank">View Project</a>
+                <img src="cv.jpg" alt="CV Project">
+                <h2>CV Project</h2>
+                <p>This project displays my CV.</p>
+                <a href="https://cv-project-example.com" target="_blank">View Project</a>
             </div>
-
-
-            <div class="project-card">
-                <img src="resumebuilder.jpg" alt="Timer Project">
-                <h2>Resume Building Project</h2>
-                <p>This project is related to resume building.</p>
-                <a href="https://hackathon-milestone3-4-5.vercel.app/" target="_blank">View Project</a>
-            </div>
-
-
-
-
-
-
         </div>
     </section>
 
     <footer class="footer">
-        <p>© 2023 NidaPervez. All rights reserved.</p>
+        <p>&copy; 2024 Nida Pervez. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
